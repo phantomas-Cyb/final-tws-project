@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dotazník spokojenosti — Telekom a.s.</title>
+  <link rel="icon" type="image/svg+xml" href="images/logos/Telekom pink small.svg">
+  <script>try{const t=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&s==='light'))document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="survey" class="bg-surface min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-7 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-0.5">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link active" aria-current="page">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+      </nav>
+      <a href="contact.html" class="btn-primary hidden sm:inline-flex">Kontaktujte nás</a>
+      <button id="theme-toggle" class="p-2 text-muted hover:text-white transition-colors shrink-0"
+        aria-label="Přepnout motiv">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1 p-2" aria-expanded="false" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-border bg-surface">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link active" aria-current="page">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+        <button id="theme-toggle-mobile" class="nav-link text-left w-full mt-1 flex items-center gap-2">
+          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <span>Přepnout motiv</span>
+        </button>
+        <a href="contact.html" class="btn-primary mt-2 w-fit">Kontaktujte nás</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="py-12">
+      <div class="max-w-3xl mx-auto px-4">
+        <h1 class="text-2xl font-bold text-white mb-2">Dotazník spokojenosti</h1>
+        <p class="section-sub mb-6">Váš názor nám pomáhá zlepšovat web. Vyplnění trvá 3 minuty.</p>
+
+        <form data-validate class="card p-6">
+          <div id="form-success" class="hidden bg-brand/10 border border-brand/30 rounded-lg p-4 text-center mb-6">
+            <div class="text-brand font-medium text-sm">Děkujeme za Vaše odpovědi!</div>
+            <div class="text-xs text-muted mt-1">Váš názor byl úspěšně odeslán.</div>
+          </div>
+
+          <div data-form-page>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-xs text-muted mb-1">Jméno a příjmení *</label>
+                <input type="text" required class="input" placeholder="Jan Novák">
+                <div class="form-error hidden text-xs text-red-400 mt-0.5" role="alert">Povinné pole</div>
+              </div>
+              <div>
+                <label class="block text-xs text-muted mb-1">E-mail *</label>
+                <input type="email" required class="input" placeholder="jan@example.com">
+                <div class="form-error hidden text-xs text-red-400 mt-0.5" role="alert">Povinné pole</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-1">Typ návštěvníka</label>
+              <select class="input">
+                <option value="" disabled selected>Vyberte...</option>
+                <option value="zakaznik">Zákazník</option>
+                <option value="partner">Partner</option>
+                <option value="uchazec">Uchazeč o zaměstnání</option>
+                <option value="novinar">Novinář</option>
+                <option value="jine">Jiné</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-2">Hodnocení webu (5 = výborné) *</label>
+              <div class="flex gap-4">
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="rating" value="1" class="accent-brand"> 1</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="rating" value="2" class="accent-brand"> 2</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="rating" value="3" class="accent-brand"> 3</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="rating" value="4" class="accent-brand"> 4</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="rating" value="5" class="accent-brand" checked> 5</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-2">Přehlednost navigace *</label>
+              <div class="flex gap-4">
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="nav" value="ano" class="accent-brand" checked> Ano</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="nav" value="castecne" class="accent-brand"> Částečně</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="nav" value="ne" class="accent-brand"> Ne</label>
+              </div>
+            </div>
+          </div>
+
+          <div data-form-page class="hidden">
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-2">Sekce, kterou jste hledal/a (lze vybrat více)</label>
+              <div class="flex flex-wrap gap-2">
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="checkbox"
+                    value="Produkty" class="accent-brand"> Produkty</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="checkbox"
+                    value="Kontakty" class="accent-brand"> Kontakty</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="checkbox"
+                    value="O nas" class="accent-brand"> O nás</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="checkbox"
+                    value="Galerie" class="accent-brand"> Galerie</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="checkbox"
+                    value="Jine" class="accent-brand"> Jiné</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-1">Rychlost načítání</label>
+              <select class="input">
+                <option value="" disabled selected>Vyberte...</option>
+                <option value="rychle">Rychlé</option>
+                <option value="prumerne">Průměrné</option>
+                <option value="pomale">Pomalé</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-2">Jak jste nás našli</label>
+              <div class="flex flex-wrap gap-4">
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="found" value="google" class="accent-brand"> Google</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="found" value="doporuceni" class="accent-brand"> Doporučení</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="found" value="linkedin" class="accent-brand"> LinkedIn</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="found" value="jine" class="accent-brand"> Jiné</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-2">Vrátíte se zpět?</label>
+              <div class="flex gap-4">
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="return" value="ano" class="accent-brand" checked> Ano</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="return" value="mozna" class="accent-brand"> Možná</label>
+                <label class="flex items-center gap-1.5 text-xs text-muted cursor-pointer"><input type="radio"
+                    name="return" value="ne" class="accent-brand"> Ne</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-xs text-muted mb-1">Připomínky / návrhy</label>
+              <textarea class="textarea h-20" placeholder="Vaše připomínky..."></textarea>
+            </div>
+
+            <div>
+              <label class="flex items-center gap-2 text-xs text-muted cursor-pointer">
+                <input type="checkbox" name="gdpr" class="accent-brand"> Souhlasím se zpracováním osobních údajů *
+              </label>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mt-6 pt-4 border-t border-border">
+            <button type="button" id="form-prev" class="btn-secondary hidden">← Předchozí</button>
+            <button type="button" id="form-next" class="btn-primary">Další →</button>
+            <button type="submit" id="form-submit" class="btn-primary hidden">Odeslat dotazník</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-surface-2">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Telekom a.s.</div>
+          <div class="text-xs text-muted">Záboří nad Blátem, ČR</div>
+          <div class="text-xs text-muted">+420 234 567 890</div>
+          <div class="text-xs text-muted">info@telekom-as.cz</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Navigace</div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="index.html"
+              class="hover:text-white transition-colors">Úvod</a> <span class="text-muted">·</span> <a href="about.html"
+              class="hover:text-white transition-colors">O nás</a> <span class="text-muted">·</span> <a
+              href="products.html" class="hover:text-white transition-colors">Produkty</a></div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="gallery.html"
+              class="hover:text-white transition-colors">Galerie</a> <span class="text-muted">·</span> <a
+              href="contact.html" class="hover:text-white transition-colors">Kontakty</a></div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Certifikace</div>
+          <div class="text-xs text-muted">NATO STANAG · ISO 9001</div>
+          <div class="text-xs text-muted">AS9100</div>
+        </div>
+        <div class="text-right">
+          <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-5 w-auto mb-2 md:ml-auto">
+          <div class="text-xs text-muted">© 2026 Telekom a.s.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

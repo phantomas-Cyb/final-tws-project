@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Telekom a.s. — Komunikace · Obrana · Technologie</title>
+  <link rel="icon" type="image/svg+xml" href="images/logos/Telekom pink small.svg">
+  <script>try{const t=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&s==='light'))document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="home" class="bg-surface min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-7 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-0.5">
+        <a href="index.html" class="nav-link active" aria-current="page">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+      </nav>
+      <a href="contact.html" class="btn-primary hidden sm:inline-flex">Kontaktujte nás</a>
+      <button id="theme-toggle" class="p-2 text-muted hover:text-white transition-colors shrink-0"
+        aria-label="Přepnout motiv">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1 p-2" aria-expanded="false" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-border bg-surface">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <a href="index.html" class="nav-link active" aria-current="page">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+        <button id="theme-toggle-mobile" class="nav-link text-left w-full mt-1 flex items-center gap-2">
+          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <span>Přepnout motiv</span>
+        </button>
+        <a href="contact.html" class="btn-primary mt-2 w-fit">Kontaktujte nás</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 py-20 lg:py-28">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1">
+            <div class="text-xs text-muted tracking-widest uppercase mb-3">od 1991 · Záboří nad Blátem · NATO certifikace</div>
+            <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-3">
+              Komunikace.<br>Obrana. Technologie.
+            </h1>
+            <p class="text-base text-muted max-w-lg leading-relaxed mb-6">
+              Telekom a.s. je konglomerát se sídlem v Záboří nad Blátem, působící na průniku civilní elektroniky a
+              obranného průmyslu.
+            </p>
+            <div class="flex gap-3">
+              <a href="products.html" class="btn-primary">Naše produkty →</a>
+              <a href="about.html" class="btn-secondary">O firmě</a>
+            </div>
+          </div>
+          <div class="flex-1 w-full max-w-md">
+            <div
+              class="aspect-video bg-surface-3 border border-border rounded-lg bg-cover bg-center"
+              style="background-image: url('images/photos/CompBuilding.png')">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-border bg-surface-2">
+      <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center">
+            <div class="stat-value">38 400</div>
+            <div class="stat-label">Zaměstnanců</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-value">€14,2 mld</div>
+            <div class="stat-label">Roční obrat</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-value">6</div>
+            <div class="stat-label">Divizí</div>
+          </div>
+          <div class="text-center">
+            <div class="stat-value">47</div>
+            <div class="stat-label">Trhů</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="section-title text-center mb-2">Naše divize</h2>
+        <p class="section-sub text-center mb-8 max-w-xl mx-auto">Šest divizí pokrývajících celé spektrum moderních
+          technologií — od komunikačních systémů po autonomní zbraňové platformy.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/communications-tower.svg" alt="Komunikační technika" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">Komunikační<br>technika</span>
+          </a>
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/satellite.svg" alt="TeleOrbit satelity" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">TeleOrbit<br>satelity</span>
+          </a>
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/fighter-jet.svg" alt="TF-90 Kestrel" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">TF-90<br>Kestrel</span>
+          </a>
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/missile-launcher.svg" alt="Zbrojní systémy" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">Zbrojní<br>systémy</span>
+          </a>
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/stealth-bomber.svg" alt="UAV & Autonomní" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">UAV &<br>Autonomní</span>
+          </a>
+          <a href="products.html" class="card flex flex-col items-center text-center gap-2 py-6">
+            <img src="images/icons/user-anonymous.svg" alt="El. boj & Kyber" class="w-8 h-8">
+            <span class="text-xs font-medium text-white">El. boj<br>& Kyber</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-surface-2 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Telekom a.s.</div>
+          <div class="text-xs text-muted">Záboří nad Blátem, ČR</div>
+          <div class="text-xs text-muted">+420 234 567 890</div>
+          <div class="text-xs text-muted">info@telekom-as.cz</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Navigace</div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="index.html"
+              class="hover:text-white transition-colors">Úvod</a> <span class="text-muted">·</span> <a href="about.html"
+              class="hover:text-white transition-colors">O nás</a> <span class="text-muted">·</span>
+            <a href="products.html" class="hover:text-white transition-colors">Produkty</a>
+          </div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="gallery.html"
+              class="hover:text-white transition-colors">Galerie</a> <span class="text-muted">·</span> <a
+              href="contact.html" class="hover:text-white transition-colors">Kontakty</a></div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Certifikace</div>
+          <div class="text-xs text-muted">NATO STANAG · ISO 9001</div>
+          <div class="text-xs text-muted">AS9100</div>
+        </div>
+        <div class="text-right">
+          <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-5 w-auto mb-2 md:ml-auto">
+          <div class="text-xs text-muted">© 2026 Telekom a.s.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

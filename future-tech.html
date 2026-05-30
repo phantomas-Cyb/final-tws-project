@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technologie budoucnosti — Telekom a.s.</title>
+  <link rel="icon" type="image/svg+xml" href="images/logos/Telekom pink small.svg">
+  <script>try{const t=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&s==='light'))document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="future-tech" class="bg-surface min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-7 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-0.5">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link active" aria-current="page">Tech. budoucnosti</a>
+      </nav>
+      <a href="contact.html" class="btn-primary hidden sm:inline-flex">Kontaktujte nás</a>
+      <button id="theme-toggle" class="p-2 text-muted hover:text-white transition-colors shrink-0"
+        aria-label="Přepnout motiv">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1 p-2" aria-expanded="false" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-border bg-surface">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link active" aria-current="page">Tech. budoucnosti</a>
+        <button id="theme-toggle-mobile" class="nav-link text-left w-full mt-1 flex items-center gap-2">
+          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <span>Přepnout motiv</span>
+        </button>
+        <a href="contact.html" class="btn-primary mt-2 w-fit">Kontaktujte nás</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-2xl font-bold text-white mb-2">Technologie budoucnosti</h1>
+        <p class="section-sub mb-8 max-w-2xl">Přehled výzkumných projektů a technologií, na kterých Telekom a.s. aktivně
+          pracuje. Část je veřejná, část klasifikovaná.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <div class="card relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-full pointer-events-none"></div>
+            <div class="w-full h-56 rounded-lg mb-3 relative overflow-hidden"
+              style="background: url('images/tech/swarm.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-1">Swarm-X Gen II</h3>
+            <p class="text-xs text-muted mb-3">Koordinovaný rojový UAV útok s vylepšenou AI koordinací a autonomním
+              rozhodováním v reálném bojovém prostředí.</p>
+            <span class="badge">R&D fáze 3</span>
+            <div class="text-xs text-muted mt-2">ETA 2027</div>
+          </div>
+          <div class="card relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-full pointer-events-none"></div>
+            <div class="w-full h-56 rounded-lg mb-3 relative overflow-hidden"
+              style="background: url('images/tech/teleorbit.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-1">TeleOrbit Gen 2</h3>
+            <p class="text-xs text-muted mb-3">+28 LEO satelitů s kvantovým šifrováním, vylepšenou odolností vůči
+              anti-satellite zbraním a mezi-družicovou komunikací.</p>
+            <span class="badge">Plánováno</span>
+            <div class="text-xs text-muted mt-2">ETA 2028</div>
+          </div>
+          <div class="card relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-full pointer-events-none"></div>
+            <div class="w-full h-56 rounded-lg mb-3 relative overflow-hidden"
+              style="background: url('images/tech/neural.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-1">AI Command Net</h3>
+            <p class="text-xs text-muted mb-3">Autonomní velení v A2/AD prostředí — neuronová síť pro koordinaci
+              vzdušných, pozemních a vesmírných prostředků.</p>
+            <span class="badge">Klasifikováno</span>
+            <div class="text-xs text-muted mt-2">Klasifikovaný projekt</div>
+          </div>
+        </div>
+
+        <h2 class="section-title mb-3">Partnerství a výzkumné instituce</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag">ČVUT Praha</span>
+          <span class="tag">DLR Oberpfaffenhofen</span>
+          <span class="tag">NATO CCDCOE</span>
+          <span class="tag">Rafael Advanced Defense</span>
+          <span class="tag">Škoda Transportation</span>
+          <span class="tag">Douskův Domácí Benzín</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-surface-2">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Telekom a.s.</div>
+          <div class="text-xs text-muted">Záboří nad Blátem, ČR</div>
+          <div class="text-xs text-muted">+420 234 567 890</div>
+          <div class="text-xs text-muted">info@telekom-as.cz</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Navigace</div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="index.html"
+              class="hover:text-white transition-colors">Úvod</a> <span class="text-muted">·</span> <a href="about.html"
+              class="hover:text-white transition-colors">O nás</a> <span class="text-muted">·</span> <a
+              href="products.html" class="hover:text-white transition-colors">Produkty</a></div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="gallery.html"
+              class="hover:text-white transition-colors">Galerie</a> <span class="text-muted">·</span> <a
+              href="contact.html" class="hover:text-white transition-colors">Kontakty</a></div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Certifikace</div>
+          <div class="text-xs text-muted">NATO STANAG · ISO 9001</div>
+          <div class="text-xs text-muted">AS9100</div>
+        </div>
+        <div class="text-right">
+          <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-5 w-auto mb-2 md:ml-auto">
+          <div class="text-xs text-muted">© 2026 Telekom a.s.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

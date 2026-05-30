@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produkty & Služby &mdash; Telekom a.s.</title>
+  <link rel="icon" type="image/svg+xml" href="images/logos/Telekom pink small.svg">
+  <script>try{const t=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&s==='light'))document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-page="products" class="bg-surface min-h-screen flex flex-col">
+
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-7 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-0.5">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link active" aria-current="page">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+      </nav>
+      <a href="contact.html" class="btn-primary hidden sm:inline-flex">Kontaktujte nás</a>
+      <button id="theme-toggle" class="p-2 text-muted hover:text-white transition-colors shrink-0"
+        aria-label="Přepnout motiv">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1 p-2" aria-expanded="false" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+        <span class="block w-5 h-0.5 bg-white/70 rounded"></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="hidden lg:hidden border-t border-border bg-surface">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <a href="index.html" class="nav-link">Úvod</a>
+        <a href="about.html" class="nav-link">O nás</a>
+        <a href="products.html" class="nav-link active" aria-current="page">Produkty</a>
+        <a href="gallery.html" class="nav-link">Galerie</a>
+        <a href="survey.html" class="nav-link">Dotazník</a>
+        <a href="contact.html" class="nav-link">Kontakty</a>
+        <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
+        <button id="theme-toggle-mobile" class="nav-link text-left w-full mt-1 flex items-center gap-2">
+          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <span>Přepnout motiv</span>
+        </button>
+        <a href="contact.html" class="btn-primary mt-2 w-fit">Kontaktujte nás</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-2xl font-bold text-white mb-2">Produkty & Služby</h1>
+        <p class="section-sub mb-6">Šest divizí &mdash; kompletní portfolio od komunikačních systémů po elektronický
+          boj.
+        </p>
+
+        <div class="flex flex-wrap gap-0 border-b border-border justify-center">
+          <button data-tab="kom"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-white border-brand">Komunikační
+            technika</button>
+          <button data-tab="orbit"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-muted border-transparent hover:text-white">TeleOrbit</button>
+          <button data-tab="let"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-muted border-transparent hover:text-white">Letecká
+            divize</button>
+          <button data-tab="zbroj"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-muted border-transparent hover:text-white">Zbrojní
+            systémy</button>
+          <button data-tab="uav"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-muted border-transparent hover:text-white">UAV
+            & Autonomní</button>
+          <button data-tab="elboj"
+            class="px-4 py-2 text-xs font-medium border-b-2 transition-colors text-muted border-transparent hover:text-white">El.
+            boj</button>
+        </div>
+
+        <div data-panel="kom" class="pt-6">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">TK-Series &mdash; VHF/UHF radiostanice</h2>
+              <p class="section-sub mb-3">Vojenské a civilní radiostanice s odolností dle MIL-STD-810. Pokrytí VHF/UHF
+                pásem, šifrované terminály, taktické mesh networks pro armádní nasazení.</p>
+              <p class="section-sub mb-3">Taktické rádiové stanice TK-Series pokrývají celé spektrum VHF (30–88 MHz) a
+                UHF (225–512 MHz) s automatickým frequency hopping až 100 skoků za sekundu, čímž výrazně snižují
+                zranitelnost vůči jammingu a zachycení signálu. Terminály jsou certifikovány dle MIL-STD-810H pro
+                extrémní teploty, vlhkost, vibrace a ponoření do 1 metru. Šifrování probíhá na hardwarové úrovni
+                algoritmem AES-256 s FIPS 140-2 certifikací.</p>
+              <p class="section-sub mb-4">TK-Series podporuje nativní budování taktických mesh
+                network — každé zařízení funguje zároveň jako uzel a relay, což eliminuje závislost na centrální
+                infrastruktuře. Dostupné ve variantách man-portable (TK-41), vehicle-mounted (TK-82) a base station
+                (TK-110). Kompatibilita s NATO STANAG 4204 a 4206 protokoly je standardní součástí dodávky.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">MIL-STD-810</span>
+                <span class="tag">VHF/UHF</span>
+                <span class="tag">Šifrování AES-256</span>
+                <span class="tag">FHSS</span>
+                <span class="tag">STANAG 4203/4204</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="documents/TK-Series_Manual.pdf"
+                  class="flex items-center gap-3 bg-brand/10 border border-brand/30 rounded-lg px-4 py-3 transition-colors hover:bg-brand/20 group">
+                  <img src="images/icons/document.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white group-hover:text-brand transition-colors">TK-4100</div>
+                    <div class="text-[10px] text-muted">Stáhnout manuál (PDF)</div>
+                  </div>
+                </a>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/communications-tower.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TK-4200</div>
+                    <div class="text-[10px] text-muted">Spec sheet · 50GW, 200 km</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/satellite-communication.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TK-5000</div>
+                    <div class="text-[10px] text-muted">SATCOM · AES-256</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/stanice.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="orbit" class="pt-6 hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">TeleOrbit &mdash; satelitní konstelace</h2>
+              <p class="section-sub mb-3">Provoz vlastní satelitní konstelace TeleOrbit &mdash; 14 družic na low Earth
+                orbit. Šifrované datalinky pro vládní instituce a krizová komunikační infrastruktura odolná vůči
+                kyberútokům a EMP.</p>
+              <p class="section-sub mb-3">Konstelace TeleOrbit pokrývá zemský povrch mezi 70° s.š. a 70° j.š. s
+                maximální dobou přerušení signálu pod 3 minuty. Každá družice nese až 12 nezávislých transpondérů v Ka-,
+                Ku- a X-pásmu s celkovou propustností 40 Gbps na družici. Mezi-družicové spoje využívají kvantově
+                šifrované laserové datalinky s rychlostí 10 Gbps.</p>
+              <p class="section-sub mb-4">Systém je navržen pro krizovou komunikaci při výpadku pozemní infrastruktury —
+                nasazení v režimu disaster recovery trvá méně než 15 minut. Všechny družice disponují hall-effect
+                iontovými motory pro korekci orbity a aktivním systémem vyhýbání se kosmickému smetí (CDM).</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">14 LEO družic</span>
+                <span class="tag">Kvantové šifrování</span>
+                <span class="tag">EMP odolnost</span>
+                <span class="tag">40 Gbps/družice</span>
+                <span class="tag">Ka/Ku/X-pásmo</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="documents/TeleOrbit_TechDoc.pdf"
+                  class="flex items-center gap-3 bg-brand/10 border border-brand/30 rounded-lg px-4 py-3 transition-colors hover:bg-brand/20 group">
+                  <img src="images/icons/document.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white group-hover:text-brand transition-colors">TO-7</div>
+                    <div class="text-[10px] text-muted">Technická dokumentace (PDF)</div>
+                  </div>
+                </a>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/satellite-imaging.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TO-12</div>
+                    <div class="text-[10px] text-muted">Optická snímkování · SAR</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/satellite.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TO-14</div>
+                    <div class="text-[10px] text-muted">40 Gbps kvantový link</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/teleorbit.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="let" class="pt-6 hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">TF-90 Kestrel &mdash; víceúčelový
+                stíhací letoun</h2>
+              <p class="section-sub mb-3">Víceúčelový stíhací letoun generace 4+,
+                vybavený aktivním electronic countermeasures systémem a supercruise
+                schopností. Kooperativní produkce s NATO partnery.</p>
+              <p class="section-sub mb-3">Draka letounu je z 65 % tvořena uhlíkovými kompozity, což zajišťuje nízkou
+                radarovou stopu (RCS pod 0,5 m²) při zachování vysoké manévrovatelnosti. Dva proudové motory s
+                měnitelným vektorováním tahu umožňují supercruise bez přídavného spalování až do Mach 1,4. Palubní radar
+                AESA s 1 200 moduly detekuje vzdušné cíle na vzdálenost přes 200 km.</p>
+              <p class="section-sub mb-4">Volitelná výzbroj zahrnuje PLŘS Cunda SEM-4 Viper, protizemní střely s
+                laserovým naváděním a kontejner s elektronickým rušením (EW pod). Letoun je certifikován pro operace z
+                letadlových lodí a nouzové přistání na neupravených plochách. Životnost draku je minimálně 6 000
+                letových hodin.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">Gen 4+</span>
+                <span class="tag">Supercruise</span>
+                <span class="tag">ECM systém</span>
+                <span class="tag">NATO kompatibilní</span>
+                <span class="tag">AESA radar</span>
+                <span class="tag">RCS &lt;0,5 m²</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="documents/TF-90 Kestrel Guidebook.pdf"
+                  class="flex items-center gap-3 bg-brand/10 border border-brand/30 rounded-lg px-4 py-3 transition-colors hover:bg-brand/20 group">
+                  <img src="images/icons/document.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white group-hover:text-brand transition-colors">TF-90A</div>
+                    <div class="text-[10px] text-muted">Letová příručka (PDF)</div>
+                  </div>
+                </a>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/fighter-jet.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TF-90B</div>
+                    <div class="text-[10px] text-muted">Dvoumístný · bojový nácvik</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/stealth-bomber.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TF-90E</div>
+                    <div class="text-[10px] text-muted">EW kontejner · AESA</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/tf-90-kestrel.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="zbroj" class="pt-6 hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">Řízené střely & APS-Shield</h2>
+              <p class="section-sub mb-3">Air-to-air missiles krátkého dosahu Cunda SEM-4 Viper s IR
+                naváděním a střední dosah Cunda TAM-12 Specter s dual-mode radar/IR
+                naváděním. Doplňkový program aktivní ochrany pozemních vozidel
+                APS-Shield.</p>
+              <p class="section-sub mb-3">Střela SEM-4 Viper dosahuje rychlosti Mach 3,5 a přetížení až 50 G.
+                Infračervená naváděcí hlavice s rozlišením 256×256 pixelů detekuje cíle na vzdálenost 25 km a je odolná
+                vůči rušení pomocí flare a DIRCM. TAM-12 Specter kombinuje IR a radarové navádění s dosahem až 80 km a
+                aktivním radiolokátorem s AESA technologií.</p>
+              <p class="section-sub mb-4">APS-Shield je hard-kill systém aktivní ochrany pro obrněná vozidla. Radarová
+                detekční jednotka s fázovaným polem zachytí přilétající PG-7V a PTŘS ve vzdálenosti do 50 m.
+                Protiopatření je odpalováno vertikálně a neutralizuje hrozbu fragmentačním účinkem. Systém je
+                integrovatelný do věží BVP, MBT a lehkých obrněnců.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">SEM-4 Viper</span>
+                <span class="tag">TAM-12 Specter</span>
+                <span class="tag">APS-Shield</span>
+                <span class="tag">IR / Radar</span>
+                <span class="tag">Mach 3,5</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/speed.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">SEM-4</div>
+                    <div class="text-[10px] text-muted">Mach 3,5 · IR · Radar</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/missile-launcher.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">TAM-12</div>
+                    <div class="text-[10px] text-muted">Dual-mode · dosah 80 km</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/secure.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">APS-1</div>
+                    <div class="text-[10px] text-muted">Hard-kill · dosah 50 m</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/cunda.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="uav" class="pt-6 hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">UAV & Autonomní systémy</h2>
+              <p class="section-sub mb-3">Průzkumné a útočné unmanned aerial vehicles řady Phantom,
+                roje malých taktických dronů Swarm-X schopné koordinovaného swarming
+                nasazení a civilní inspekční systémy pro energetiku.</p>
+              <p class="section-sub mb-3">Phantom M (průzkumný) nese optoelektronickou hlavici s 30× optickým zoomem,
+                termovizí a laserovým dálkoměrem. Vytrvalost letu je 18 hodin, dostup 7 600 m. Phantom A (útočný) může
+                nést až 4 laserem naváděné munice nebo 2 střely vzduch-země. Oba modely jsou vybaveny satelitním
+                datalinkem a autonomním navigačním systémem pro let v GPS-denied prostředí.</p>
+              <p class="section-sub mb-4">Swarm-X je platforma pro koordinované nasazení 12–50 mikro-dronů s umělou
+                inteligencí pro rozdělování cílů v reálném čase. Komunikace mezi drony probíhá přes mesh síť s
+                frekvenčním skákáním (FHSS), odolná vůči rušení. Civilní varianta se používá pro inspekci elektrického
+                vedení, potrubí a větrných elektráren.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">Phantom UAV</span>
+                <span class="tag">Swarm-X</span>
+                <span class="tag">Inspekční drony</span>
+                <span class="tag">18 h výdrž</span>
+                <span class="tag">GPS-denied</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/drone.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">Phantom M</div>
+                    <div class="text-[10px] text-muted">Uživatelský manuál (PDF)</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/target.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">Phantom A</div>
+                    <div class="text-[10px] text-muted">4× LGB · útočný dosah</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/drone-swarm.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">Swarm-X</div>
+                    <div class="text-[10px] text-muted">12–50 ks · AI koordinace</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/uav.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="elboj" class="pt-6 hidden">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-white mb-2">Elektronický boj & Kybernetika</h2>
+              <p class="section-sub mb-3">Systémy electronic warfare, GPS spoofing, hardwarové firewally
+                pro kritickou infrastrukturu a ofenzivní cyber nástroje dodávané
+                výhradně vládním zákazníkům v rámci licencovaných kontraktů.</p>
+              <p class="section-sub mb-3">Produktová řada EW-100 zahrnuje přenosné, vozidlové a stanovištní rušičky
+                komunikačních pásem (20–6000 MHz) s výkonem až 100 W. Systém umí automaticky identifikovat a selektivně
+                rušit nepřátelské signály při zachování vlastní komunikace. GPS spoofing modul GPS-S3 generuje falešné
+                GPS signály s přesností na 2 m a dokáže vytvořit virtuální koridor o poloměru až 5 km.</p>
+              <p class="section-sub mb-4">Hardwarový firewall FW-HW2 je certifikován pro nasazení v utajovaných režimech
+                vlády ČR a NATO. Zpracovává 100 Gbps provozu s latencí pod 5 μs, provádí hloubkovou inspekci paketů
+                (DPI) a detekuje známé útoky pomocí AI modelu trénovaného na 50+ milionech vzorků. Ofenzivní nástroje
+                jsou dodávány pouze prověřeným vládním složkám na základě mezivládních dohod.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag">EW systémy</span>
+                <span class="tag">GPS spoofing</span>
+                <span class="tag">Hardwarové firewally</span>
+                <span class="tag">Licencované kontrakty</span>
+                <span class="tag">DPI</span>
+                <span class="tag">100 Gbps</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <a href="documents/security_sheet.pdf"
+                  class="flex items-center gap-3 bg-brand/10 border border-brand/30 rounded-lg px-4 py-3 transition-colors hover:bg-brand/20 group">
+                  <img src="images/icons/document.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white group-hover:text-brand transition-colors">EW-100</div>
+                    <div class="text-[10px] text-muted">Bezpečnostní list (PDF)</div>
+                  </div>
+                </a>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/gps-spoofing.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">GPS-S3</div>
+                    <div class="text-[10px] text-muted">2 m přesnost · rádius 5 km</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 card py-3">
+                  <img src="images/icons/hardware-firewall.svg" alt="" class="w-5 h-5 shrink-0">
+                  <div>
+                    <div class="text-xs font-medium text-white">FW-HW2</div>
+                    <div class="text-[10px] text-muted">100 Gbps · latence 5 μs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-96 h-96 border border-border rounded-lg shrink-0"
+              style="background: url('images/products/kyber.jpg') center/cover no-repeat, linear-gradient(to bottom, var(--color-surface-3), var(--color-surface-2))">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-surface-2">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Telekom a.s.</div>
+          <div class="text-xs text-muted">Záboří nad Blátem, ČR</div>
+          <div class="text-xs text-muted">+420 234 567 890</div>
+          <div class="text-xs text-muted">info@telekom-as.cz</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Navigace</div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="index.html"
+              class="hover:text-white transition-colors">Úvod</a> <span class="text-muted">·</span> <a href="about.html"
+              class="hover:text-white transition-colors">O nás</a> <span class="text-muted">·</span> <a
+              href="products.html" class="hover:text-white transition-colors">Produkty</a></div>
+          <div class="text-xs text-muted flex flex-wrap gap-x-1.5"><a href="gallery.html"
+              class="hover:text-white transition-colors">Galerie</a> <span class="text-muted">·</span> <a
+              href="contact.html" class="hover:text-white transition-colors">Kontakty</a></div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Certifikace</div>
+          <div class="text-xs text-muted">NATO STANAG · ISO 9001</div>
+          <div class="text-xs text-muted">AS9100</div>
+        </div>
+        <div class="text-right">
+          <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-5 w-auto mb-2 md:ml-auto">
+          <div class="text-xs text-muted">© 2026 Telekom a.s.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
