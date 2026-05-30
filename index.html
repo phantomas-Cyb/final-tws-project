@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Telekom a.s. — Komunikace · Obrana · Technologie</title>
   <link rel="icon" type="image/svg+xml" href="images/logos/Telekom pink small.svg">
-  <script>try{const t=new URLSearchParams(location.search).get('theme'),s=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&s==='light'))document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+  <script>try { const t = new URLSearchParams(location.search).get('theme'), s = localStorage.getItem('theme'); if (t === 'light' || (t !== 'dark' && s === 'light')) document.documentElement.setAttribute('data-theme', 'light') } catch (e) { }</script>
   <link href="css/style.css" rel="stylesheet">
   <script defer src="js/main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +33,14 @@
       <a href="contact.html" class="btn-primary hidden sm:inline-flex">Kontaktujte nás</a>
       <button id="theme-toggle" class="p-2 text-muted hover:text-white transition-colors shrink-0"
         aria-label="Přepnout motiv">
-        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5" />
           <path
             d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
         </svg>
-        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </button>
@@ -60,14 +60,14 @@
         <a href="contact.html" class="nav-link">Kontakty</a>
         <a href="future-tech.html" class="nav-link">Tech. budoucnosti</a>
         <button id="theme-toggle-mobile" class="nav-link text-left w-full mt-1 flex items-center gap-2">
-          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+          <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
             <circle cx="12" cy="12" r="5" />
             <path
               d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
           </svg>
-          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
+          <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
           <span>Přepnout motiv</span>
@@ -82,7 +82,8 @@
       <div class="max-w-7xl mx-auto px-4 py-20 lg:py-28">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1">
-            <div class="text-xs text-muted tracking-widest uppercase mb-3">od 1991 · Záboří nad Blátem · NATO certifikace</div>
+            <div class="text-xs text-muted tracking-widest uppercase mb-3">od 1991 · Záboří nad Blátem · NATO
+              certifikace</div>
             <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-3">
               Komunikace.<br>Obrana. Technologie.
             </h1>
@@ -96,8 +97,7 @@
             </div>
           </div>
           <div class="flex-1 w-full max-w-md">
-            <div
-              class="aspect-video bg-surface-3 border border-border rounded-lg bg-cover bg-center"
+            <div class="aspect-video bg-surface-3 border border-border rounded-lg bg-cover bg-center"
               style="background-image: url('images/photos/CompBuilding.png')">
             </div>
           </div>
@@ -165,7 +165,7 @@
 
   <footer class="border-t border-border bg-surface-2 mt-auto">
     <div class="max-w-7xl mx-auto px-4 py-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
         <div>
           <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Telekom a.s.</div>
           <div class="text-xs text-muted">Záboří nad Blátem, ČR</div>
@@ -187,6 +187,17 @@
           <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Certifikace</div>
           <div class="text-xs text-muted">NATO STANAG · ISO 9001</div>
           <div class="text-xs text-muted">AS9100</div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white uppercase tracking-wider mb-2">Hlavní partneři</div>
+          <div class="flex gap-4 items-center">
+            <a href="https://ddb.neocities.org/"><img class="h-8 w-auto" src="images/logos/ddb.svg"
+                alt="Partner DDB"></a>
+            <a href="https://www.fcviktoria.cz/"><img class="h-8 w-auto" src="images/logos/Viktorka.png"
+                alt="Partner Viktoria Plzeň"></a>
+            <a href="https://www.bkboleslav.cz/"><img class="h-8 w-auto" src="images/logos/BKMB.png" alt="BKMB"></a>
+            <a href=""><img class="h-8 w-auto" src="images/logos/H0L0-CAST.png" alt="H0L0-CAST"></a>
+          </div>
         </div>
         <div class="text-right">
           <img src="images/logos/Telekom pink text big.svg" alt="Telekom a.s." class="h-5 w-auto mb-2 md:ml-auto">
