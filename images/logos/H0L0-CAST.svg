@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" fill="#091520" rx="60"/>
+  <defs>
+    <filter id="g">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="50" stroke="#00e5ff" stroke-width="1.5" opacity=".35" filter="url(#g)"/>
+  <circle cx="60" cy="60" r="36" stroke="#00e5ff" stroke-width="1" stroke-dasharray="5 4" opacity=".25"/>
+  <circle cx="60" cy="60" r="22" stroke="#00e5ff" stroke-width="2" opacity=".5" filter="url(#g)"/>
+  <text x="60" y="67" font-family="Poppins,'Segoe UI',Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="3" fill="#00e5ff" text-anchor="middle" filter="url(#g)">H</text>
+</svg>
