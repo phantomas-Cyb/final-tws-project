@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   toggle(document.getElementById("theme-toggle"));
-  toggle(document.getElementById("theme-toggle-mobile"));
+
 
   const hamburger = document.getElementById("hamburger");
   const mobileNav = document.getElementById("mobile-nav");
